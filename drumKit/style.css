@@ -1,0 +1,97 @@
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Firefox */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  /* outline: none; */
+  border: none;
+  padding: 0;
+  background-color: inherit;
+  color: #1d2c3c;
+  font-weight: 700;
+  font-size: 14px;
+}
+/* ######################################################## */
+
+/* MAIN CSS */
+body {
+  height: 100vh;
+  /* background-image: url(assets/backgroundimage.jpg); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url(assets/backgroundimage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 0.4rem solid rgb(14, 14, 14);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem 0.3rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+  transform: scale(0.9);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+@media screen and (max-width: 1024px) {
+  .keys {
+    flex-wrap: wrap;
+  }
+}
