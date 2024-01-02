@@ -1,6 +1,9 @@
 window.addEventListener("keydown", playSound);
 const allKeys = document.querySelectorAll('.key');
-allKeys.forEach( eachKey =>  eachKey.addEventListener("transitionend", removeTransition));
+// allKeys.forEach( eachKey =>  eachKey.addEventListener("transitionend", removeTransition));
+allKeys.forEach((eachKey) => {
+    eachKey.addEventListener("transitionend", removeTransition);
+});
 
 function playSound(e) {
     // console.log(e.keyCode, "Hello");
