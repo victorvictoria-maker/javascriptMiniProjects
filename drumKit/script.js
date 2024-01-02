@@ -1,9 +1,10 @@
 window.addEventListener("keydown", playSound);
 const allKeys = document.querySelectorAll('.key');
 // allKeys.forEach( eachKey =>  eachKey.addEventListener("transitionend", removeTransition));
-allKeys.forEach((eachKey) => {
-    eachKey.addEventListener("transitionend", removeTransition);
-});
+
+// allKeys.forEach((eachKey) => {
+//     eachKey.addEventListener("transitionend", removeTransition);
+// });
 
 function playSound(e) {
     // console.log(e.keyCode, "Hello");
@@ -16,9 +17,11 @@ function playSound(e) {
     audio.play();
 
     key.classList.add("playing");
+
+    key.addEventListener("transitionend", removeTransition);
 }
 
 function removeTransition(e) {
-    if(e.propertyName !== "transform") return;
-    this.classList.remove("playing"); 
+     if(e.propertyName !== "transform") return;
+     this.classList.remove("playing"); 
 };
