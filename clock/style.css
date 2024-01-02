@@ -1,0 +1,84 @@
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Firefox */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  /* outline: none; */
+  border: none;
+  padding: 0;
+  background-color: inherit;
+  color: #1d2c3c;
+  font-weight: 700;
+  font-size: 14px;
+}
+/* ######################################################## */
+
+/* MAIN CSS */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url(backgroundimage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.clockwall {
+  border: 10px solid purple;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+}
+
+.minutes {
+  display: none;
+}
+
+.seconds {
+  height: 3px;
+  background-color: rgb(208, 193, 209);
+}
