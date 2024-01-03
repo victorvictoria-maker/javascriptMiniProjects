@@ -1,0 +1,49 @@
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ######################################################## */
+/* :root {
+  --padding: 10px;
+  --blur: 2px;
+  --primary-colour: rgb(42, 11, 42);
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagewrapper .image {
+  width: 350px;
+  height: 250px;
+  padding: 10px;
+  background-color: red;
+  /* background-color: red; */
+  filter: blur(2px);
+}
