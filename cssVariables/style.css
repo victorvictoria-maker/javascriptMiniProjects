@@ -25,11 +25,11 @@ body {
 }
 
 /* ######################################################## */
-/* :root {
+:root {
   --padding: 10px;
   --blur: 2px;
-  --primary-colour: rgb(42, 11, 42);
-} */
+  --primary-colour: rgb(150, 17, 150);
+}
 
 main {
   display: flex;
@@ -37,13 +37,28 @@ main {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(asset/backgroundimage.jpg);
+  color: #ffffff;
+}
+
+h1 {
+  border-bottom: 2px solid var(--primary-colour);
+  margin-block-end: 10px;
+}
+
+h1 span {
+  color: var(--primary-colour);
+}
+
+.imagewrapper {
+  margin: 10px;
 }
 
 .imagewrapper .image {
   width: 350px;
   height: 250px;
-  padding: 10px;
-  background-color: red;
-  /* background-color: red; */
-  filter: blur(2px);
+  padding: var(--padding);
+  background-color: var(--primary-colour);
+  filter: blur(var(--blur));
 }

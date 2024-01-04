@@ -8,11 +8,8 @@ const image = document.querySelector(".image");
 // colour.addEventListener("change", makeChange);
 
 // console.log(colourInput, spaceInput, blurInput);
-colourInput.addEventListener("input", (e) => {
-    // console.log(this);
-    image.style.backgroundColor =  e.target.value;
-});
+colourInput.addEventListener("input", (e) => {document.documentElement.style.setProperty("--primary-colour", `${e.target.value}`)});
 
-blurInput.addEventListener("input", (e) => image.style.filter = `blur(${e.target.value}px)`);
+blurInput.addEventListener("input", (e) => document.documentElement.style.setProperty("--blur", `${e.target.value}px`));
 
-spaceInput.addEventListener("input", (e) => image.style.padding = `${e.target.value}px`);
+spaceInput.addEventListener("input", (e) => document.documentElement.style.setProperty("--padding", `${e.target.value}px`));
